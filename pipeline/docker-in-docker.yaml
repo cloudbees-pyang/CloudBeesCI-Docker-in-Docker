@@ -1,1 +1,18 @@
-
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    some-label: dind-agent
+spec:
+  containers:
+  - name: dind
+    image: docker:19.03.11-dind
+    tty: true
+    securityContext:
+      privileged: true
+    volumeMounts:
+      - name: docker-graph-storage
+        mountPath: /var/lib/docker
+  volumes:
+    - name: docker-graph-storage
+      emptyDir: {}
