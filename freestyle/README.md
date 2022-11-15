@@ -8,6 +8,10 @@
 4. Set "Run as User ID" to 0
 5. To enable Jenkins user to create Kubernetes objects: kubectl create clusterrolebinding jenkinsrolebinding - -clusterrole=cluster-admin - - group=system:serviceaccounts:jenkins
 
+
+
+
+
 ## note
 An image with more useful tools for pod template: https://hub.docker.com/repository/docker/poseidon1979/jnlp-agent-docker-kubectl-helm
 
